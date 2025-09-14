@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Landing } from './pages/Landing.tsx'
 import { Signup } from './pages/Signup.tsx'
 import { Signin } from './pages/Signin.tsx'
 import { FullBlog } from './pages/Blog.tsx' 
@@ -13,6 +14,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Landing />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/blog/:id" element={<FullBlog />} />

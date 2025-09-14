@@ -159,7 +159,7 @@ blogRouter.put('/:id', async (c) => {
         })
     }
     catch (e) {
-        c.json({
+        return c.json({
             message: "post not found"
         })
     }
