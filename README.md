@@ -1,48 +1,81 @@
-1 . Project Overview
+# Scriptly
 
-This project is a Medium-inspired blogging web application where users can register/login, write blogs, and view posts from other users. The goal is to replicate the core experience of Medium while learning full-stack development concepts.
+Scriptly is an edge-ready full-stack publishing platform that allows users to authenticate, write blogs, and read posts from other users.  
+It is built to replicate the core blogging experience while focusing on clean architecture, shared validation, and scalable backend design.
 
-2. Features (so far)
+---
 
-🔐 User authentication (sign up, login, JWT/session-based auth)
+## 🚀 Live Overview
 
-📝 Create and publish blogs
+Scriptly demonstrates:
 
-📖 View blogs by all users
+- Edge-compatible backend using Hono
+- PostgreSQL relational modeling with Prisma ORM
+- JWT-based authentication
+- Shared schema validation across frontend and backend
+- Modular route architecture
+- Protected CRUD operations
 
-👤 User-specific blog management
+---
 
-3. Planned Features (future scope)
+## 🧩 Features
 
-✏️ Edit & delete blogs
+### ✅ Implemented
 
-👍 Like & comment system
+- 🔐 User Authentication (Sign up / Login with JWT)
+- 📝 Create & Publish Blogs
+- 📖 View Blogs by All Users
+- 👤 User-Specific Blog Management
+- 🧱 Middleware-based Route Protection
+- 📦 Shared Zod Validation Package (published to npm)
 
-🔍 Search and filter blogs
+---
 
-🖼️ Rich text editor with image upload
+### 🔮 Planned Features
 
-🌐 Deploy to [Vercel/Render/AWS]
+- ✏️ Edit & Delete Blogs
+- 👍 Like & Comment System
+- 🔍 Search & Filter Blogs
+- 🖼️ Rich Text Editor with Image Upload
+- 🌐 Production Deployment (Vercel / Render / AWS)
 
-4. Tech Stack
+---
 
-Frontend: React  + TailwindCSS 
+## 🛠 Tech Stack
 
-Backend: Hono + Cloudflare(Serverless Backend)
+### Frontend
+- React
+- TypeScript
+- Tailwind CSS
 
-Database: PostgreSQL + Prisma ORM
+### Backend
+- Hono (Cloudflare Edge Runtime)
+- JWT Authentication
+- CORS Middleware
 
-Authentication: JWT
+### Database
+- PostgreSQL
+- Prisma ORM
 
-5. How to Run Locally
-# Clone the repo
-git clone https://github.com/UtkarshPratapSingh7777/Medium/
-cd Medium
+### Validation
+- Zod (custom reusable validation package published to npm)
 
-# Install dependencies
-npm install
+---
 
-# Setup environment variables (DB, JWT secret, etc.)
+## 🏗 Architecture Overview
 
-# Run the dev server
-npm run dev
+- Modular route separation (`/api/v1/user`, `/api/v1/blog`)
+- Middleware-based JWT verification
+- Prisma relational schema (User ↔ Post)
+- Custom React hooks for authenticated data fetching
+- Shared validation layer to prevent schema drift between frontend and backend
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/UtkarshPratapSingh7777/Scriptly.git
+cd Scriptly
