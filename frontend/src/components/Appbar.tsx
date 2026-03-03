@@ -3,7 +3,7 @@ export const Appbar = ({buttoninput , navigateto} : {buttoninput  :string , navi
     return <div className="border border-slate-100 shadow-md rounded-xl flex justify-between px-5">
         <div className="flex items-center">
             <Logo />
-            Medium
+            Scriptly
         </div>
         <div className="p-1 gap-3 flex items-center">
             <Buttoncomponent title={buttoninput} onclick={navigateto}/>
